@@ -38,6 +38,23 @@ body.theme-light { --bg: #f4f1ea; --surface: #fffdf8; --surface-2: #eae4d8; --in
 .hero { position: relative; display: flex; min-height: calc(100svh - 84px); overflow: hidden; padding-top: clamp(70px, 11vh, 150px); padding-bottom: 88px; border-bottom: 1px solid var(--line); }
 .hero::after { position: absolute; right: clamp(24px, 5vw, 78px); bottom: 88px; width: min(28vw, 390px); height: 1px; background: var(--accent); content: ""; opacity: .65; }
 .hero-copy { z-index: 1; align-self: center; max-width: 880px; }
+.hero-home { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(330px, .72fr); gap: clamp(40px, 8vw, 150px); align-items: center; }
+.hero-home::after { display: none; }
+.hero-home .hero-copy { max-width: 650px; }
+.hero-system { position: relative; z-index: 1; display: flex; min-height: 430px; flex-direction: column; align-self: center; padding: 27px 30px 30px; border: 1px solid var(--line); background-color: color-mix(in srgb, var(--surface) 76%, transparent); background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 42px 42px; overflow: hidden; }
+.hero-system::before { position: absolute; top: 96px; right: -20px; width: 230px; height: 230px; border: 1px solid var(--accent); border-radius: 50%; content: ""; opacity: .43; }
+.hero-system::after { position: absolute; top: 136px; right: 76px; width: 13px; height: 13px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 14px color-mix(in srgb, var(--accent) 10%, transparent); content: ""; }
+.hero-system-header { display: flex; justify-content: space-between; color: var(--accent); font: 500 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.hero-system-core { position: relative; z-index: 1; margin: auto 0 36px; }
+.hero-system-core i { display: block; width: 45px; height: 1px; margin-bottom: 17px; background: var(--accent); }
+.hero-system-core p { max-width: 260px; margin: 0; color: var(--ink); font: 600 clamp(30px, 3.2vw, 46px)/.98 var(--serif); letter-spacing: -.04em; }
+.hero-system-core b { color: var(--accent); font-family: var(--mono); font-size: .64em; font-weight: 400; }
+.hero-system-list { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr; margin: 0; border-top: 1px solid var(--line); }
+.hero-system-list div { display: grid; grid-template-columns: 74px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.hero-system-list dt { color: var(--accent); font: 500 9px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.hero-system-list dd { margin: 0; color: var(--muted); font-size: 12px; }
+.hero-system-link { position: relative; z-index: 1; align-self: flex-start; margin-top: 23px; color: var(--ink); font: 500 11px var(--mono); text-decoration: none; }
+.hero-system-link span { margin-left: 6px; color: var(--accent); font-size: 15px; }
 .eyebrow, .section-kicker { color: var(--accent); font: 500 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
 .eyebrow { display: flex; gap: 9px; align-items: center; }
 .eyebrow span { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
@@ -160,9 +177,13 @@ body.theme-light { --bg: #f4f1ea; --surface: #fffdf8; --surface-2: #eae4d8; --in
   .theme-toggle { margin-right: 10px; margin-left: auto; }
   .theme-label { display: none; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 76px; }
+  .hero-home { display: flex; flex-direction: column; gap: 38px; align-items: stretch; padding-bottom: 88px; }
   .hero h1 { font-size: clamp(53px, 13vw, 80px); }
   .hero-copy { margin-top: 0; }
   .hero::after { right: 24px; bottom: 44px; width: 32vw; }
+  .hero-home .hero-copy { max-width: 650px; }
+  .hero-system { min-height: 360px; padding: 24px; }
+  .hero-system::before { top: 84px; right: -42px; width: 205px; height: 205px; }
   .hero-index { display: none; }
   .intro-grid, .contact-section, .experience-layout, .education-card { grid-template-columns: 1fr; }
   .section-heading { grid-template-columns: 1fr; margin-bottom: 40px; }
