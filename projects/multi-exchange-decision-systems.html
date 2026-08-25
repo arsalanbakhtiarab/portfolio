@@ -54,6 +54,16 @@
         </div>
       </section>
 
+      <section class="live-market-section section-shell" id="market-telemetry" data-live-market>
+        <div class="section-heading"><p class="section-kicker">Live market telemetry</p><div><h2>Public market data, clearly separated from strategy performance.</h2><p>A live BTC/USDT spot snapshot illustrates the type of time-series input an engineering workflow can observe. It does not represent platform PnL, a strategy result, or an investment recommendation.</p></div></div>
+        <div class="live-market-panel" data-market-state="loading">
+          <div class="market-panel-header"><div><p class="market-label">BTC / USDT · Spot market</p><p class="market-window" data-market-window>Loading recent hourly closes…</p></div><button class="market-refresh" type="button" data-market-refresh><span>↻</span> Refresh</button></div>
+          <div class="market-chart-wrap"><svg class="market-chart" viewBox="0 0 720 260" role="img" aria-label="Recent BTC USDT hourly spot-price chart"><defs><linearGradient id="market-area-gradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="currentColor" stop-opacity=".28"/><stop offset="100%" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs><g class="market-grid"><line x1="0" x2="720" y1="34" y2="34"/><line x1="0" x2="720" y1="92" y2="92"/><line x1="0" x2="720" y1="150" y2="150"/><line x1="0" x2="720" y1="208" y2="208"/></g><path class="market-area" data-market-area d=""/><path class="market-line" data-market-line d=""/><circle class="market-point" data-market-point cx="0" cy="0" r="0"/></svg><p class="market-status" data-market-status aria-live="polite">Connecting to public market data…</p></div>
+          <div class="market-metrics"><div><span>Spot price</span><strong data-market-price>—</strong></div><div><span>24h market change</span><strong data-market-change>—</strong></div><div><span>24h range</span><strong data-market-range>—</strong></div><div><span>24h quote volume</span><strong data-market-volume>—</strong></div></div>
+          <div class="market-panel-footer"><p><span data-market-updated>—</span> · Public spot-market telemetry only. This is not a strategy-performance chart.</p><a href="https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/market" target="_blank" rel="noreferrer">Data source ↗</a></div>
+        </div>
+      </section>
+
       <section class="experience-section section-shell" id="implementation">
         <div class="section-heading"><p class="section-kicker">Implementation detail</p><div><h2>What the end-to-end work looks like in practice.</h2><p>These areas summarize responsibilities and technical decisions that can be discussed openly without exposing the platform’s private implementation.</p></div></div>
         <div class="detail-grid">
